@@ -1,0 +1,29 @@
+#header {
+  margin-bottom: 20px;
+}
+
+.form {
+  text-decoration: none;
+  
+  border-radius: 3px;
+  float: left; width: 700px; height: 100px;
+  padding: 30px 30px;
+  margin-right:100px;
+  display:block;
+}
+
+.divimage{
+  text-decoration: none;
+  float: "right";
+  border-radius: 3px;
+  padding: 30px 30px;
+  display:block;
+}
+
+.image {
+  text-decoration: none;
+  float: "left";
+  border-radius: 3px;
+  max-width: 30%;
+  display:block;
+}
