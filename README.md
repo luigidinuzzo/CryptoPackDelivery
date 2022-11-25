@@ -18,7 +18,7 @@ git clone https://github.com/luigidinuzzo/CryptoPackDelivery.git
 > + [Truffle](https://trufflesuite.com/truffle) for deploying contracts to the blockchain;
 > + [Ganache](https://www.trufflesuite.com/ganache) as testnet;
 > + Node.js, [Npm](https://nodejs.org/en) and [Boostrap](https://getbootstrap.com) for frontend;
-> + [Metamask](https://metamask.io) Account for testing the transactions;
+> + [Metamask](https://metamask.io) for testing the transactions;
 
 
 ## Set up the development environment
