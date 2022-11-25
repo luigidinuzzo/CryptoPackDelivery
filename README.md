@@ -13,6 +13,13 @@ Download the zip file from github or clone it from the command line:
 git clone https://github.com/luigidinuzzo/CryptoPackDelivery.git
 ```
 
+## Technology stack
+> + [Solidity](https://soliditylang.org) and [Remix IDE](https://remix.ethereum.org) for writing smart contracts;
+> + [Truffle](https://trufflesuite.com/truffle) for deploying contracts to the blockchain;
+> + [Ganache](https://www.trufflesuite.com/ganache) as testnet;
+> + Node.js, [Npm](https://nodejs.org/en) and [Boostrap](https://getbootstrap.com) for frontend;
+
+
 ## Set up the development environment
 ### Necessary programs and plugins
 
