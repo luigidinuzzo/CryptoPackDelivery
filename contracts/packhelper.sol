@@ -76,76 +76,76 @@ contract PackHelper is PackFactory {
   //restituisce indirizzi unici senza doppioni. costosa ma utile in ottica futura
   function getAddressSender() external view returns(address[] memory) {
       bool doppio = false;
-		  uint count = 0;
+      uint count = 0;
       uint counter = 0;
       uint dim = 0;
-		  address[] memory array = getAddressSenderDouble();		  
+      address[] memory array = getAddressSenderDouble();		  
       address[] memory temp = new address[](array.length);
       for(uint i = 0; i < array.length ; i++) {
-			  for(uint j = 0; j < array.length; j++) {
-				  if(array[i] == temp[j]) {
-					  doppio = true;
+	for(uint j = 0; j < array.length; j++) {
+	    if(array[i] == temp[j]) {
+	       doppio = true;
             }
-				  }
-				  if(doppio == false) {
-            temp[count] = array[i];
-            count++;
-					  dim++;	
-			    }
-			    doppio = false;
-			}
+	 }
+	if(doppio == false) {
+           temp[count] = array[i];
+           count++;
+	   dim++;	
+	}
+	doppio = false;
+      }
       address[] memory result = new address[](dim);
-        for(uint i = 0; i < array.length ; i++) {
-			    for(uint j = 0; j < dim; j++) {
-				    if(array[i] == result[j]) {
-					    doppio = true;
-              }
-				    }
-				    if(doppio == false) {
-              result[counter] = array[i];
-					    counter++;	
-			    	}
-			      doppio = false;
-				  }
-		  return result;
-    }
+      for(uint i = 0; i < array.length ; i++) {
+	for(uint j = 0; j < dim; j++) {
+	    if(array[i] == result[j]) {
+		doppio = true;
+            }
+	}
+	  if(doppio == false) {
+             result[counter] = array[i];
+	     counter++;	
+	  }
+	doppio = false;
+       }
+    return result;
+   }
 
 
   //restituisce indirizzi unici senza doppioni. costosa ma utile in ottica futura
   function getAddressReceiver() public view returns(address[] memory) {
     bool doppio = false;
-		uint count = 0;
+    uint count = 0;
     uint counter = 0;
     uint dim = 0;
-		address[] memory array = getAddressReceiverDouble();		  
+    address[] memory array = getAddressReceiverDouble();		  
     address[] memory temp = new address[](array.length);
     for(uint i = 0; i < array.length ; i++) {
-			for(uint j = 0; j < array.length; j++) {
-				if(array[i] == temp[j]) {
-					doppio = true;
-          }
-				}
-				if(doppio == false) {
-          temp[count] = array[i];
-          count++;
-					dim++;	
-			  }
-			  doppio = false;
-		}
-    address[] memory result = new address[](dim);
-      for(uint i = 0; i < array.length ; i++) {
-			  for(uint j = 0; j < dim; j++) {
-				  if(array[i] == result[j]) {
-					  doppio = true;
+	for(uint j = 0; j < array.length; j++) {
+	    if(array[i] == temp[j]) {
+		doppio = true;
             }
-				  }
-				  if(doppio == false) {
-            result[counter] = array[i];
-					  counter++;	
-			    }
-			    doppio = false;
-				}
-		return result;
+	}
+	if(doppio == false) {
+           temp[count] = array[i];
+           count++;
+	   dim++;	
+	}
+	doppio = false;
+     }
+     address[] memory result = new address[](dim);
+     for(uint i = 0; i < array.length ; i++) {
+	for(uint j = 0; j < dim; j++) {
+	    if(array[i] == result[j]) {
+	       doppio = true;
+            }
+	}
+        if(doppio == false) {
+           result[counter] = array[i];
+	   counter++;	
+	}
+	doppio = false;
+     }
+    return result;
   }
   
 }
